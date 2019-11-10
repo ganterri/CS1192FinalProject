@@ -30,7 +30,10 @@ public class Event
 	Double dateYear;
 	
 	@Column
-	String time;
+	String startTime;
+	
+	@Column
+	String endTime;
 	
 	@Column
 	String orgName;
@@ -92,14 +95,6 @@ public class Event
 		this.dateYear = dateYear;
 	}
 
-	public String getTime() {
-		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
-	}
-
 	public String getOrgName() {
 		return orgName;
 	}
@@ -132,11 +127,20 @@ public class Event
 		this.description = description;
 	}
 
-	@Override
-	public String toString() {
-		return "Event [id=" + id + ", eventName=" + eventName + ", venue=" + venue + ", dateMonth=" + dateMonth
-				+ ", dateDay=" + dateDay + ", dateYear=" + dateYear + ", time=" + time + ", orgName=" + orgName
-				+ ", opa=" + opa + ", category=" + category + ", description=" + description + "]";
+	public String getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+
+	public String getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
 	}
 	
 	

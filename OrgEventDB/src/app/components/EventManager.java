@@ -18,7 +18,8 @@ public class EventManager
 			String dateMonth,
 			Double dateDay,
 			Double dateYear, 
-			String time,
+			String startTime,
+			String endTime,
 			String orgName, 
 			String description,
 			String category,
@@ -28,7 +29,8 @@ public class EventManager
 		Event x = new Event();
 		x.setEventName(eventName);
 		x.setVenue(venue);
-		x.setTime(time);
+		x.setStartTime(startTime);
+		x.setEndTime(endTime);
 		x.setDateMonth(dateMonth);
 		x.setDateDay(dateDay);
 		x.setDateYear(dateYear);
@@ -39,7 +41,7 @@ public class EventManager
 		x = eventRepo.save(x);
 		
 		
-		return "This is done";
+		return "Event has been uploaded!";
 		
 	}
 }
