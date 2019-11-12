@@ -60,7 +60,7 @@ public class EventController {
 	}
 	
 	@GET
-	@Path("/sortmonth")
+	@Path("/byMonth")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Event> getMonth(@QueryParam("Month") String dateMonth)
 	{
