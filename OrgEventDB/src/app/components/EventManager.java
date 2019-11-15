@@ -14,12 +14,12 @@ public class EventManager
 	EventRepository eventRepo;
 	
 	public String newEvent(String eventName,
-			String venue,
+			String venueName,
 			String dateMonth,
 			Double dateDay,
 			Double dateYear, 
-			String startTime,
-			String endTime,
+			Double startTime,
+			Double endTime,
 			String orgName, 
 			String description,
 			String category,
@@ -28,18 +28,21 @@ public class EventManager
 	{
 		Event x = new Event();
 		x.setEventName(eventName);
-		x.setVenue(venue);
-		x.setStartTime(startTime);
-		x.setEndTime(endTime);
 		x.setDateMonth(dateMonth);
 		x.setDateDay(dateDay);
 		x.setDateYear(dateYear);
-		x.setOrgName(orgName);
+		x.setStartTime(startTime);
+		x.setEndTime(endTime);
 		x.setDescription(description);
 		x.setCategory(category);
 		x.setOpa(opa);
-		x = eventRepo.save(x);
+		eventRepo.save(x);
 		
+		//idle variables: venueName, orgName
+		//need to check if the org and venue is already in their respective database system
+		//if so, get the venueID and orgID from the respective venueName and orgName
+		//if not, trigger a window to open to inquiring to fill up the database - venueName and/or orgName
+
 		
 		return "Event has been uploaded!";
 		

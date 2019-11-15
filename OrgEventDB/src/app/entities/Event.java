@@ -12,13 +12,13 @@ public class Event
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	Long id;
+	Long eventId;
 	
 	@Column
 	String eventName;
 
 	@Column
-	String venue;
+	Long venueID;
 
 	@Column
 	String dateMonth;
@@ -30,13 +30,13 @@ public class Event
 	Double dateYear;
 	
 	@Column
-	String startTime;
+	Double startTime;
 	
 	@Column
-	String endTime;
+	Double endTime;
 	
 	@Column
-	String orgName;
+	Long orgID;
 	
 	@Column
 	Boolean opa;
@@ -47,12 +47,12 @@ public class Event
 	@Column
 	String description;
 
-	public Long getId() {
-		return id;
+	public Long getEventId() {
+		return eventId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setEventId(Long eventId) {
+		this.eventId = eventId;
 	}
 
 	public String getEventName() {
@@ -63,12 +63,12 @@ public class Event
 		this.eventName = eventName;
 	}
 
-	public String getVenue() {
-		return venue;
+	public Long getVenueID() {
+		return venueID;
 	}
 
-	public void setVenue(String venue) {
-		this.venue = venue;
+	public void setVenueID(Long venueID) {
+		this.venueID = venueID;
 	}
 
 	public String getDateMonth() {
@@ -95,12 +95,28 @@ public class Event
 		this.dateYear = dateYear;
 	}
 
-	public String getOrgName() {
-		return orgName;
+	public Double getStartTime() {
+		return startTime;
 	}
 
-	public void setOrgName(String orgName) {
-		this.orgName = orgName;
+	public void setStartTime(Double startTime) {
+		this.startTime = startTime;
+	}
+
+	public Double getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(Double endTime) {
+		this.endTime = endTime;
+	}
+
+	public Long getOrgID() {
+		return orgID;
+	}
+
+	public void setOrgID(Long orgID) {
+		this.orgID = orgID;
 	}
 
 	public Boolean getOpa() {
@@ -127,23 +143,6 @@ public class Event
 		this.description = description;
 	}
 
-	public String getStartTime() {
-		return startTime;
-	}
-
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
-	}
-
-	public String getEndTime() {
-		return endTime;
-	}
-
-	public void setEndTime(String endTime) {
-		this.endTime = endTime;
-	}
-	
-	
 	
 	
 }
